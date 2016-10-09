@@ -1,0 +1,267 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.banner
+{
+    width: 100%;
+    height: 500px;
+
+    background-image: url('1.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+ul
+{
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    opacity: .8;
+    background-color: black;
+}
+li
+{
+    font-family: Helvetica;
+    font-size: 25px;
+    font-weight: bold;
+    float: left;
+    width: 20%;
+    padding: 10px 0;
+    list-style-type: none;
+    text-align: center;
+    color: grey;
+    background-color: white;
+}
+li:hover
+{
+    cursor: pointer;
+    color: rgba(255,255,255,.5);
+    border-bottom: 2px solid grey;
+    background-color: #f88;
+}
+.banner a
+{
+    text-decoration: none;
+    color: grey;
+}
+.percentage
+{
+    position: relative;
+    top: 55px;
+    float: right;
+
+    width: 30%;
+}
+.percentage img
+{
+    width: 100%;
+    height: 250px;
+
+    opacity: .8;
+    border-left: 2px dashed black;
+}
+.myprofile
+{
+    font-size: 25px;
+
+    position: relative;
+    top: 55px;
+
+    float: left;
+
+    width: 70%;
+    height: 50px;
+    padding: 15px 0 10px 0;
+
+    text-align: center;
+
+    opacity: .8;
+    border-right: 2px dashed black;
+    background-color: white;
+}
+.myprofile span
+{
+    font-size: 35px;
+
+    margin-left: 10px;
+
+    text-transform: uppercase;
+
+    text-shadow: 2px 2px 2px black;
+}
+.gd
+{
+    font-size: 30px;
+    font-style: bolder;
+
+    position: relative;
+    top: 50px;
+
+    float: right;
+
+    width: 30%;
+    height: 18%;
+    padding-top: 35px;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    opacity: .8;
+    color: GREY;
+    border-left: 2px dashed black;
+    background-color: white;
+    text-shadow: 2px 2px 2px black;
+}
+.gd:first-letter
+{
+    font-size: 60px;
+}
+.col
+{
+    float: left;
+
+    width: 33%;
+}
+.sec
+{
+    height: auto;
+    
+    background-image: url(family.jpg);
+    background-size: 100%;
+}
+.family .heading
+{
+    font-size: 30px;
+
+    padding: 30px;
+
+    opacity: .8;
+    color: white;
+    border-top: 5px solid white;
+    border-bottom: 5px solid white;
+    background-color: black;
+}
+.fav .heading
+{
+    font-size: 30px;
+
+    position: relative;
+
+    margin-top: 400px;
+    padding: 30px;
+
+    opacity: .8;
+    color: white;
+    border-top: 5px solid white;
+    border-bottom: 5px solid white;
+    background-color: black;
+}
+.image
+{
+    z-index: 1;
+
+    width: 150px;
+    height: 150px;
+    margin-top: 50px;
+    margin-left: 150px;
+
+    text-align: center;
+
+    border: 3px solid black;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 5px 8px 5px black;
+}
+.coverImg{
+    opacity: 0.5;
+    z-index: 1;
+    border-radius: 50%;
+}
+.coverImg:hover{
+    opacity: 0;
+}
+.mom
+{
+    background-image: url(mom.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60%;
+}
+.dad
+{
+    background-image: url(dad.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 70%;
+}
+.bro
+{
+    background-image: url(bro.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 90%;
+}
+.caption
+{
+    /*padding-top: 15px;*/
+    padding: 15px 100px 0 100px;
+
+    text-align: center;
+}
+.caption h2
+{
+    color: turquoise;
+    text-shadow: 2px 2px 2px black;
+}
+table
+{
+    width: 50%;
+    margin-top: 50px;
+    margin-left: 400px;
+    color: #022;
+    border: 3px solid black;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 3px 3px black;
+}
+th{
+	text-align: center;
+	padding-left: 150px;
+}
+tr:nth-child(odd)
+{
+    height: 60px;
+
+    background-color: white;
+}
+tr:nth-child(even)
+{
+    height: 60px;
+
+    background-color: grey;
+}
+tr:first-child
+{
+    font-size: 30px;
+
+    height: 80px;
+}
+td:first-child{
+	padding-left: 60px;
+	font-size: 25px;
+	width: 80%;
+}
+td{
+	height: 80px;
+}
+.itemImg{
+	opacity :0.2;
+}
+.itemName:hover,.itemName:hover+.itemImg, .itemImg:hover{
+      opacity: 1;
+     font-weight: bolder;  
+
+}
