@@ -1,0 +1,36 @@
+Youtube url : https://youtu.be/IlP8IFKLGiY
+
+
+SELECT * FROM Orderline; 
+
+SELECT * FROM Product;
+
+SELECT * FROM Customer WHERE city='New York';
+
+SELECT * FROM Orders;
+
+SELECT * FROM Orders WHERE custumer_id='2';
+
+SELECT * FROM Product WHERE product_name='table' OR product_name='chair';
+
+SELECT * FROM Customers WHERE customer_name='Richard Newman';
+
+SELECT sum(ordered_quantity) FROM Orderline WHERE product_id='4001';
+
+SELECT * FROM Product WHERE price>1000;
+
+SELECT * FROM Customer WHERE city LIKE '%K';
+
+SELECT * FROM Customer WHERE city LIKE 's%';
+
+SELECT *, price-price*.1 AS special_price FROM `Orderline`;
+
+INSERT INTO Orders VALUES (108, '10-NOV-14', 1);
+
+COMMIT
+
+UPDATE Customer SET pstal_code=10032 WHERE customer_name='Ma';
+
+DELETE FROM Orderline WHERE order_id=107
+
+ROLLBACK
