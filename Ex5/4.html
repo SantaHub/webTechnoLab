@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+	<head>
+	<title>
+		
+	</title>
+	</head>
+<body>
+
+<fieldset> Convert <input type="text" id="data" />
+<select id="from">
+<option>Indian Rupee</option>
+<option>US Dollar</option>
+</select>
+to
+<select id ="to">
+<option> US Dollar </option>
+<option> Indian Rupee </option>
+</select>
+<button onclick="convert();">Calculate</button> <br><br> <p>Answer : <span id="answer"></span> </p>	
+</fieldset>
+
+
+<script type="text/javascript">
+	var convert=function(){
+		var f=document.getElementById("from").selectedIndex;
+		var t=document.getElementById("to").selectedIndex;
+
+		var amnt=document.getElementById("data").value;
+
+		if(f==0&&t==0){
+			console.log("Inidan to US")
+			amnt=amnt/60;
+		}
+
+		if(f==1&&t==1){
+			console.log("us to India")
+			amnt=amnt*60;
+		}
+
+		document.getElementById("answer").innerHTML=amnt;
+
+	}
+</script>
+
+</body>
+</html>

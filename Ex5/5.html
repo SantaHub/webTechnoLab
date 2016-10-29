@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+	<head>
+	<title>
+		
+	</title>
+	</head>
+<body>
+	<p>Enter the string </p>	
+<h1>Heads or Tails?</h1>
+<div>
+<img src="head.jpg" width="100px" id="coin" /> <br />
+<button id="flip" onclick="flip()">Flip!</button>
+</div>
+<p>
+Heads Total: <span id="num_heads">0</span><br />
+Tails Total: <span id="num_tails">0</span>
+</p>
+
+<script type="text/javascript">
+	var hn=0,tn=0;
+	var flip=function(){
+		if(document.getElementById('coin').src=="file:///home/austin/Documents/Learn/karunya/webLab/Ex5/head.jpg"){
+			document.getElementById('coin').src="tail.jpg";
+			tn++;
+		}
+		else{
+			document.getElementById('coin').src="head.jpg";
+			console.log(document.getElementById('coin').src)
+			hn++;
+
+		}
+		document.getElementById("num_tails").innerHTML=tn;
+		document.getElementById("num_heads").innerHTML=hn;
+	}
+</script>
+
+</body>
+</html>

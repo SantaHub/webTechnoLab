@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+	<head>
+	<title>
+		
+	</title>
+</head>
+<body>
+
+<h1>Fruit Farm</h1>
+<div>
+Rows: <input type="text" id ="rows" value="2" />
+Columns: <input type="text" id ="columns" value="2" /> <br />
+<button onclick="grow();">Plant Garden</button>
+</div>
+<div id="garden"></div>
+
+
+<script type="text/javascript">
+	var grow = function(){
+		document.getElementById("garden").innerHTML="";
+
+		var rows= document.getElementById("rows").value;
+		var col= document.getElementById("columns").value;
+
+		var ac=0,oc=0;
+		var slots= rows*col;
+
+		for(var i=0;i<rows;i++){
+			for(var j=0;j<col;j++){
+				var choice= Math.round(Math.random()+1)
+
+				if(choice==1 && ac<(slots/2)){
+					document.getElementById("garden").innerHTML += "<img src= Apple.jpg width =100px height= 100px>"
+					ac++;
+				}
+				else if(choice==2 && oc<(slots/2)){
+					document.getElementById("garden").innerHTML += "<img src= orange.jpg width =100px height= 100px>"
+					oc++;
+				}
+				else if(choice==2 && ac<=(slots/2)){
+					document.getElementById("garden").innerHTML += "<img src= Apple.jpg width =100px height= 100px>"
+					ac++
+				}
+				else {
+					document.getElementById("garden").innerHTML += "<img src= orange.jpg width =100px height= 100px>"
+					oc++;
+				}
+			}
+
+			document.getElementById("garden").innerHTML += "<br/>"
+		}
+	}
+
+</script>
+
+</body>
+</html>

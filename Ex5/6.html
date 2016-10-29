@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+	<head>
+	<title>
+		
+	</title>
+	</head>
+<body>
+
+<h1>Pizza Order Form</h1>
+<fieldset>
+# of 1/2kg Cakes <input type="text" id="small" /><br />
+# of 1kg Cakes <input type="text" id="medium" /><br />
+# of 2kg Cakes <input type="text" id="large" /><br />
+Tip:
+<label><input type="radio" value="10" name="tip" /> 10%</label>
+<label><input type="radio" value="15" name="tip" checked="checked" /> 15% </label>
+<label><input type="radio" value="20" name="tip" /> 20%</label> <br />
+<button id="submit" onclick="cal()">Calculate Order</button>
+</fieldset>
+<p>
+Cost of order: <span id="price"></span>
+<p>
+
+<script type="text/javascript">	
+
+var cal=function(){
+		var cost=(document.getElementById("small").value*100)+(document.getElementById("medium").value*200)+(document.getElementById("large").value*400);
+		cost=cost*1;
+		cost=cost+(cost*0.09);
+		cost= cost+(cost*(document.querySelector('input[name="tip"]:checked').value/100));
+		document.getElementById("price").innerHTML=cost;
+	}
+</script>
+
+</body>
+</html>
