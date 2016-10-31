@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Website</title>
+    <link rel="stylesheet" href="new.css">
+</head>
+<body>   
+    <div class="nav">
+        <ul>
+        <li><a href="page1.html" style="text-decoration: none">Digit Clock</a></li>
+        <li><a href="page2.html" style="text-decoration: none">Dynamic Background</a></li>
+        <li><a href="page3.html" style="text-decoration: none">Zoom</a></li>
+        <li><a href="page4.html" style="text-decoration: none">Car</a></li>
+        <li><a href="page5.html" style="text-decoration: none">student</a></li>
+        </ul>
+    </div>  
+    <div class="container">
+       <img src="car.png" width="300px" id="myImage">
+        <br><br>
+        <input type="button" onclick="moveRight()" value="Start">
+        <input type="button" onclick="stop()" value="Stop">
+        <script>
+            var imgObj = null;
+            var animate;
+                imgObj = document.getElementById('myImage');
+                imgObj.style.position = 'relative';
+                imgObj.style.left = '0px';
+  
+            function moveRight() {
+                imgObj.style.left = parseInt(imgObj.style.left) - 10 + 'px';
+                animate = setTimeout(moveRight, 200);
+            }
+            function stop() {
+                clearTimeout(animate);
+                imgObj.style.left = '0px';
+            }
+        </script>
+    </div>
+</body>
+</html>

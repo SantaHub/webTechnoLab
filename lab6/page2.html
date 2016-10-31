@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Website</title>
+    <link rel="stylesheet" href="new.css">
+</head>
+<body>   
+    <div class="nav">
+        <ul>
+        <li><a href="page1.html" style="text-decoration: none">Digit Clock</a></li>
+        <li><a href="page2.html" style="text-decoration: none">Dynamic Background</a></li>
+        <li><a href="page3.html" style="text-decoration: none">Zoom</a></li>
+        <li><a href="page4.html" style="text-decoration: none">Car</a></li>
+        <li><a href="page5.html" style="text-decoration: none">student</a></li>
+        </ul>
+    </div>  
+    <div class="container">
+        <h1>Dynamic Background</h1>
+        <script>
+        //define function setBackgroundColor
+        function setBackgroundColor(){
+        var red = Math.floor(Math.random()*255);
+        var blue = Math.floor(Math.random()*255);
+        var green = Math.floor(Math.random()*255);
+        var color= "rgb("+red+","+green+","+blue+")";
+        document.getElementsByTagName("body")[0].style="background-color:"+color;
+        }
+        setInterval("setBackgroundColor()", 300);
+
+        </script>   
+    </div>
+</body>
+</html>

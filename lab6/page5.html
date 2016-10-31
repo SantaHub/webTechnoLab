@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Student</title>
+    <link rel="stylesheet" href="new.css">
+</head>
+<body>   
+    <div class="nav">
+        <ul>
+        <li><a href="page1.html" style="text-decoration: none">Digit Clock</a></li>
+        <li><a href="page2.html" style="text-decoration: none">Dynamic Background</a></li>
+        <li><a href="page3.html" style="text-decoration: none">Zoom</a></li>
+        <li><a href="page4.html" style="text-decoration: none">Car</a></li>
+        <li><a href="page5.html" style="text-decoration: none">student</a></li>
+        </ul>
+    </div>  
+
+    <div class="container">
+        <br><br>
+       <span id="book"></span><br><br>
+        <span>Before 2000: </span>
+        <span id="before"></span><br><br>
+        <span>After 2000: </span>
+        <span id="after"></span>
+        <script>
+            var student = [
+                 { name: 'Kevin',
+                regno:'UR14CE014',
+                Year:'2007'
+                },
+                { name: 'Joseph',
+                regno:'UR14CS114',
+                Year:'2001'
+                },
+                 { name: 'George',
+                regno:'UR14ME314',
+                Year:'1997'
+                },
+                 { name: 'Allen',
+                regno:'UR14CS162',
+                Year:'2003'
+                },
+                 { name: 'Melvin',
+                regno:'UR14AE212',
+                Year:'1996'
+                }]; 
+  
+            var i=0;
+            while(i<student.length){
+                    document.getElementById('book').innerHTML += student[i].name+"'s Register Number is "+student[i].regno+"<br><br>";
+                    i++;
+                } 
+            var i=0;
+            while(i<student.length){
+                
+                if(parseInt(student[i].Year)<=2000){
+                    console.log(parseInt(student[i].Year));
+                    document.getElementById("before").innerHTML+=student[i].name + " , ";
+                    document.getElementById("before").innerHTML+=' ';
+                }
+                else {
+                    document.getElementById("after").innerHTML+=student[i].name  + " , ";
+                    document.getElementById("after").innerHTML+=' ';
+                }
+                i++;
+            }            
+        </script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Website</title>
+    <link rel="stylesheet" href="new.css">
+</head>
+<body>   
+    <div class="nav">
+        <ul>
+        <li><a href="page1.html" style="text-decoration: none">Digit Clock</a></li>
+        <li><a href="page2.html" style="text-decoration: none">Dynamic Background</a></li>
+        <li><a href="page3.html" style="text-decoration: none">Zoom</a></li>
+        <li><a href="page4.html" style="text-decoration: none">Car</a></li>
+        <li><a href="page5.html" style="text-decoration: none">student</a></li>
+        </ul>
+    </div>    
+    <div class="container">
+        <h1>Digital Clock</h1>
+        <span id="time" style="font-size:50px;"> </span>
+    </div>
+    
+    <script>
+   function display(){
+    var date = new Date();
+    document.getElementById('time').innerHTML = date.getHours()+":"+date.getMinutes()+""+":"+date.getSeconds();
+    }
+    setInterval("display()", 1000);
+</script>
+</body>
+</html>
